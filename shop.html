@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+ 
   <header>
     <div class="logo"><svg width="173" height="62" viewBox="0 0 173 62" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M54.664 47C54.184 47 53.944 46.824 53.944 46.472C53.944 46.12 54.152 45.928 54.568 45.896L56.728 45.56C57.368 45.464 57.8 45.304 58.024 45.08C58.248 44.824 58.36 44.36 58.36 43.688V14.888C58.36 14.44 58.264 14.12 58.072 13.928C57.88 13.736 57.48 13.64 56.872 13.64C55.688 13.64 54.52 14.152 53.368 15.176C52.216 16.2 51.464 17.848 51.112 20.12L50.872 21.704C50.808 22.12 50.584 22.328 50.2 22.328C49.72 22.328 49.512 22.056 49.576 21.512L50.008 12.824C50.072 12.088 50.36 11.72 50.872 11.72C51.096 11.72 51.304 11.784 51.496 11.912C51.688 12.008 52.008 12.12 52.456 12.248C52.936 12.376 53.688 12.44 54.712 12.44H65.416C66.44 12.44 67.176 12.376 67.624 12.248C68.104 12.12 68.44 12.008 68.632 11.912C68.856 11.784 69.064 11.72 69.256 11.72C69.768 11.72 70.056 12.088 70.12 12.824L70.552 21.512C70.616 22.056 70.408 22.328 69.928 22.328C69.544 22.328 69.32 22.12 69.256 21.704L69.016 20.12C68.696 17.848 67.96 16.2 66.808 15.176C65.656 14.152 64.472 13.64 63.256 13.64C62.648 13.64 62.248 13.736 62.056 13.928C61.864 14.12 61.768 14.44 61.768 14.888V43.688C61.768 44.36 61.88 44.824 62.104 45.08C62.36 45.304 62.792 45.464 63.4 45.56L65.56 45.896C65.976 45.928 66.184 46.12 66.184 46.472C66.184 46.824 65.944 47 65.464 47H54.664Z" fill="white"/>
@@ -28,178 +29,197 @@
     <span></span>
   </button>
 
-
-    <nav>
-    <li><a href="index.html">Home</a></li>
-    <li><a href="shop.html">Shop</a></li>
-    <li><a href="About.html">About</a></li>
-    <li><a href="cart.html">Cart</a></li>
-    <li><a href="Contact.html">Contact</a></li>
-
  
-    
-  </nav>
+<nav>
+  <li><a href="index.html">Home</a></li>
+  <li><a href="shop.html">Shop</a></li>
+  <li><a href="About.html">About</a></li>
+  <li><a href="cart.html">Cart</a></li>
+  <li><a href="Contact.html">Contact</a></li>
+  <li id="nav-signin"><a href="signIn.html">SignIn</a></li>
+  <li id="nav-signup"><a href="signUp.html">SignUp</a></li>
+</nav>
+
   </header>
 
- <main>
-    <section class="product-grid">
-      <div id="first-batch">
-        <!-- Product Card 1 -->
-        <div class="product-card">
-          <img class="watch-image" src="Time/watch1.jpg" alt="Legacy Edition" />
-          <div class="watch-name">Legacy Edition</div>
-          <div class="watch-price">$199.99</div>
-          <div class="product-actions">
-            <button class="add-to-cart" onclick="addToCart({
-              id: 'watch1',
-              name: 'Legacy Edition',
-              price: 199.99,
-              image: 'Time/watch1.jpg'
-            })">Add to Cart</button>
-          </div>
-        </div>
-
-        <!-- Product Card 2 -->
-        <div class="product-card">
-          <img class="watch-image" src="Time/watch2.jpg" alt="Model Two" />
-          <div class="watch-name">Model Two</div>
-          <div class="watch-price">$249.99</div>
-          <div class="product-actions">
-            <button class="add-to-cart" onclick="addToCart({
-              id: 'watch2',
-              name: 'Model Two',
-              price: 249.99,
-              image: 'Time/watch2.jpg'
-            })">Add to Cart</button>
-          </div>
-        </div>
-
-        <!-- Product Card 3 -->
-        <div class="product-card">
-          <img class="watch-image" src="Time/watch3.jpg" alt="Model Three" />
-          <div class="watch-name">Model Three</div>
-          <div class="watch-price">$299.99</div>
-          <div class="product-actions">
-            <button class="add-to-cart" onclick="addToCart({
-              id: 'watch3',
-              name: 'Model Three',
-              price: 299.99,
-              image: 'Time/watch3.jpg'
-            })">Add to Cart</button>
-          </div>
-        </div>
+ <main><section class="product-grid">
+  <div id="first-batch">
+    <div class="product-card">
+      <img class="watch-image" src="Time/watch1.jpg" alt="Legacy Edition" />
+      <div class="watch-name">Legacy Edition</div>
+      <div class="watch-price">$199.99</div>
+      <div class="product-actions">
+        <button
+          class="add-to-cart"
+          data-product-id="watch1"
+          data-product-name="Legacy Edition"
+          data-product-price="199.99"
+          data-product-image="Time/watch1.jpg"
+        >
+          Add to Cart
+        </button>
       </div>
+    </div>
 
-      <div id="second-batch">
-        <!-- Product Card 4 -->
-        <div class="product-card">
-          <img class="watch-image" src="Time/watch4.jpg" alt="Model Four" />
-          <div class="watch-name">Model Four</div>
-          <div class="watch-price">$349.99</div>
-          <div class="product-actions">
-            <button class="add-to-cart" onclick="addToCart({
-              id: 'watch4',
-              name: 'Model Four',
-              price: 349.99,
-              image: 'Time/watch4.jpg'
-            })">Add to Cart</button>
-          </div>
-        </div>
-
-        <!-- Product Card 5 -->
-        <div class="product-card">
-          <img class="watch-image" src="Time/watch5.jpg" alt="Model Five" />
-          <div class="watch-name">Model Five</div>
-          <div class="watch-price">$399.99</div>
-          <div class="product-actions">
-            <button class="add-to-cart" onclick="addToCart({
-              id: 'watch5',
-              name: 'Model Five',
-              price: 399.99,
-              image: 'Time/watch5.jpg'
-            })">Add to Cart</button>
-          </div>
-        </div>
+    <div class="product-card">
+      <img class="watch-image" src="Time/watch2.jpg" alt="Model Two" />
+      <div class="watch-name">Model Two</div>
+      <div class="watch-price">$249.99</div>
+      <div class="product-actions">
+        <button
+          class="add-to-cart"
+          data-product-id="watch2"
+          data-product-name="Model Two"
+          data-product-price="249.99"
+          data-product-image="Time/watch2.jpg"
+        >
+          Add to Cart
+        </button>
       </div>
+    </div>
 
-      <div id="last-batch">
-        <!-- Model Six -->
-        <div class="product-card">
-          <img class="watch-image" src="Time/watch6.jpg" alt="Model Six" />
-          <div class="watch-name">Model Six</div>
-          <div class="watch-price">$449.99</div>
-          <div class="product-actions">
-            <button class="add-to-cart" onclick="addToCart({
-              id: 'watch6',
-              name: 'Model Six',
-              price: 449.99,
-              image: 'Time/watch6.jpg'
-            })">Add to Cart</button>
-          </div>
-        </div>
-
-        <!-- Model Seven -->
-        <div class="product-card">
-          <img class="watch-image" src="Time/watch7.jpg" alt="Model Seven" />
-          <div class="watch-name">Model Seven</div>
-          <div class="watch-price">$499.99</div>
-          <div class="product-actions">
-            <button class="add-to-cart" onclick="addToCart({
-              id: 'watch7',
-              name: 'Model Seven',
-              price: 499.99,
-              image: 'Time/watch7.jpg'
-            })">Add to Cart</button>
-          </div>
-        </div>
-
-        <!-- Model Eight -->
-        <div class="product-card">
-          <img class="watch-image" src="Time/watch8.jpg" alt="Model Eight" />
-          <div class="watch-name">Model Eight</div>
-          <div class="watch-price">$549.99</div>
-          <div class="product-actions">
-            <button class="add-to-cart" onclick="addToCart({
-              id: 'watch8',
-              name: 'Model Eight',
-              price: 549.99,
-              image: 'Time/watch8.jpg'
-            })">Add to Cart</button>
-          </div>
-        </div>
-
-        <!-- Model Nine -->
-        <div class="product-card">
-          <img class="watch-image" src="Time/watch9.jpg" alt="Model Nine" />
-          <div class="watch-name">Model Nine</div>
-          <div class="watch-price">$599.99</div>
-          <div class="product-actions">
-            <button class="add-to-cart" onclick="addToCart({
-              id: 'watch9',
-              name: 'Model Nine',
-              price: 599.99,
-              image: 'Time/watch9.jpg'
-            })">Add to Cart</button>
-          </div>
-        </div>
-
-        <!-- Model Ten -->
-        <div class="product-card">
-          <img class="watch-image" src="Time/watch10.jpg" alt="Model Ten" />
-          <div class="watch-name">Model Ten</div>
-          <div class="watch-price">$649.99</div>
-          <div class="product-actions">
-           <button class="add-to-cart" onclick="addToCart({
-              id: 'watch2',
-              name: 'Model Two',
-              price: 249.99,
-              image: 'Time/watch2.jpg'
-            })">Add to Cart</button>
-          </div>
-          </div>
-        </div>
+    <div class="product-card">
+      <img class="watch-image" src="Time/watch3.jpg" alt="Model Three" />
+      <div class="watch-name">Model Three</div>
+      <div class="watch-price">$299.99</div>
+      <div class="product-actions">
+        <button
+          class="add-to-cart"
+          data-product-id="watch3"
+          data-product-name="Model Three"
+          data-product-price="299.99"
+          data-product-image="Time/watch3.jpg"
+        >
+          Add to Cart
+        </button>
       </div>
-    </section>
+    </div>
+  </div>
+
+  <div id="second-batch">
+    <div class="product-card">
+      <img class="watch-image" src="Time/watch4.jpg" alt="Model Four" />
+      <div class="watch-name">Model Four</div>
+      <div class="watch-price">$349.99</div>
+      <div class="product-actions">
+        <button
+          class="add-to-cart"
+          data-product-id="watch4"
+          data-product-name="Model Four"
+          data-product-price="349.99"
+          data-product-image="Time/watch4.jpg"
+        >
+          Add to Cart
+        </button>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <img class="watch-image" src="Time/watch5.jpg" alt="Model Five" />
+      <div class="watch-name">Model Five</div>
+      <div class="watch-price">$399.99</div>
+      <div class="product-actions">
+        <button
+          class="add-to-cart"
+          data-product-id="watch5"
+          data-product-name="Model Five"
+          data-product-price="399.99"
+          data-product-image="Time/watch5.jpg"
+        >
+          Add to Cart
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div id="last-batch">
+    <div class="product-card">
+      <img class="watch-image" src="Time/watch6.jpg" alt="Model Six" />
+      <div class="watch-name">Model Six</div>
+      <div class="watch-price">$449.99</div>
+      <div class="product-actions">
+        <button
+          class="add-to-cart"
+          data-product-id="watch6"
+          data-product-name="Model Six"
+          data-product-price="449.99"
+          data-product-image="Time/watch6.jpg"
+        >
+          Add to Cart
+        </button>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <img class="watch-image" src="Time/watch7.jpg" alt="Model Seven" />
+      <div class="watch-name">Model Seven</div>
+      <div class="watch-price">$499.99</div>
+      <div class="product-actions">
+        <button
+          class="add-to-cart"
+          data-product-id="watch7"
+          data-product-name="Model Seven"
+          data-product-price="499.99"
+          data-product-image="Time/watch7.jpg"
+        >
+          Add to Cart
+        </button>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <img class="watch-image" src="Time/watch8.jpg" alt="Model Eight" />
+      <div class="watch-name">Model Eight</div>
+      <div class="watch-price">$549.99</div>
+      <div class="product-actions">
+        <button
+          class="add-to-cart"
+          data-product-id="watch8"
+          data-product-name="Model Eight"
+          data-product-price="549.99"
+          data-product-image="Time/watch8.jpg"
+        >
+          Add to Cart
+        </button>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <img class="watch-image" src="Time/watch9.jpg" alt="Model Nine" />
+      <div class="watch-name">Model Nine</div>
+      <div class="watch-price">$599.99</div>
+      <div class="product-actions">
+        <button
+          class="add-to-cart"
+          data-product-id="watch9"
+          data-product-name="Model Nine"
+          data-product-price="599.99"
+          data-product-image="Time/watch9.jpg"
+        >
+          Add to Cart
+        </button>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <img class="watch-image" src="Time/watch10.jpg" alt="Model Ten" />
+      <div class="watch-name">Model Ten</div>
+      <div class="watch-price">$649.99</div>
+      <div class="product-actions">
+        <button
+          class="add-to-cart"
+          data-product-id="watch10"
+          data-product-name="Model Ten"
+          data-product-price="649.99"
+          data-product-image="Time/watch10.jpg"
+        >
+          Add to Cart
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
 
     <section class="teaser-section">
       <div class="teaser-content">
